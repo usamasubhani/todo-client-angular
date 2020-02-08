@@ -1,16 +1,14 @@
 
 
-<ul class="tasksList">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
+<ul class="tasksList" *ngFor="let task of getTasks()">
+  <li><input type="checkbox" [checked]="task.done"> {{ task.title }}</li>
+  <!-- <p>{{ task.done }}</p> -->
+  <!-- <li class="checked">Pay bills</li> -->
+  
 </ul>
 
 <div class="taskInput">
     <input type="text" id="taskInput_title" placeholder="Title...">
     <input type="text" id="taskInput_desc" placeholder="Description">
-    <span onclick="newElement()" class="addBtn">Add</span>
+    <span ng-click="newTask()" class="addBtn">Add</span>
 </div>
