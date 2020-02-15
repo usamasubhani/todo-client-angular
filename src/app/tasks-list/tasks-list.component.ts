@@ -39,6 +39,14 @@ export class TasksListComponent implements OnInit {
       //   .subscribe(data => this.tasks = data);
     }
   }
+
+  deleteTask(task) {
+    this.dataService.deleteTask(task)
+     .subscribe(data => this.tasks = data);
+    // this.dataService.getTasks()
+    //  .subscribe(data => this.tasks = data);
+  }
+
   getTasks(){
     // console.log(this.http.get<Task[]>('http://127.0.0.1:5000/todo/api/v1.0/tasks'));
     // this.http.get('http://0.0.0.0:5000/todo/api/v1.0/tasks')

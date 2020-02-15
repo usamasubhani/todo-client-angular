@@ -19,4 +19,8 @@ export class DataService {
     console.log("DONE")
     return this.http.get<Task[]>(this.url);
   }
+
+  deleteTask(task: Task) {
+    return this.http.delete<Task[]>(this.url + '/' + task.id);
+  }
 }
