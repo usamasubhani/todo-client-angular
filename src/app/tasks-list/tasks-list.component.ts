@@ -23,6 +23,22 @@ export class TasksListComponent implements OnInit {
      .subscribe(data => this.tasks = data);
   }
 
+
+  newTask(taskTitle, taskDesc) {
+    if(taskTitle.value != "") {
+      let task: Task = {
+        id: 0,
+        title: taskTitle.value,
+        description: taskDesc.value,
+        status: false
+      };
+      // console.log(task);
+      this.dataService.newTask(task)
+       .subscribe(data => this.tasks = data);
+      // this.dataService.getTasks()
+      //   .subscribe(data => this.tasks = data);
+    }
+  }
   getTasks(){
     // console.log(this.http.get<Task[]>('http://127.0.0.1:5000/todo/api/v1.0/tasks'));
     // this.http.get('http://0.0.0.0:5000/todo/api/v1.0/tasks')

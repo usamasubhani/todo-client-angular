@@ -13,4 +13,10 @@ export class DataService {
   getTasks() {
     return this.http.get<Task[]>(this.url);
   }
+
+  newTask(task: Task) {
+    return this.http.post<Task[]>(this.url, task);
+    console.log("DONE")
+    return this.http.get<Task[]>(this.url);
+  }
 }

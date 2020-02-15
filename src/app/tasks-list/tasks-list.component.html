@@ -14,7 +14,17 @@
     <span ng-click="newTask()" class="addBtn">Add</span>
 </div> -->
 
+<div class="input">
+  <input type="text" name="task-title" #taskTitleInput placeholder="Title..."><br>
+  <input type="text" name="task-desc" #taskDescInput placeholder="Desc..."><br>
+  <button class="addBtn" (click)="newTask(taskTitleInput, taskDescInput)">Add</button><br>
+</div>
+<br><br>
+<div class="list">
 <ul class="tasksList" *ngFor="let task of tasks">
   <li><input class="checkbox" type="checkbox" [checked]="task.status" value=" ">{{ task.title }}</li>
 </ul>
+
+<br><br>
 <button (click)="showTasks()" >Get</button>
+</div>
