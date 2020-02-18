@@ -23,4 +23,8 @@ export class DataService {
   deleteTask(task: Task) {
     return this.http.delete<Task[]>(this.url + '/' + task.id);
   }
+
+  updateTask(task: Task) {
+    return this.http.put<Task[]>(this.url + '/' + task.id, task);
+  }
 }

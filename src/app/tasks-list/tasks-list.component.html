@@ -22,7 +22,7 @@
 <br><br>
 <div class="list">
 <ul class="tasksList" *ngFor="let task of tasks">
-  <li><input class="checkbox" type="checkbox" [checked]="task.status" value=" ">{{ task.title }}<button class="delBtn" (click)="deleteTask(task)">Del</button></li>
+  <li><input class="checkbox" type="checkbox" [checked]="task.status" (click)="changeTaskStatus(task)">{{ task.title }}<button class="delBtn" (click)="deleteTask(task)">Del</button></li>
 </ul>
 
 <br><br>
