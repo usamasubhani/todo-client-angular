@@ -14,17 +14,17 @@
     <span ng-click="newTask()" class="addBtn">Add</span>
 </div> -->
 
-<div class="input">
-  <input type="text" name="task-title" #taskTitleInput placeholder="Title..."><br>
-  <input type="text" name="task-desc" #taskDescInput placeholder="Desc..."><br>
-  <button class="addBtn" (click)="newTask(taskTitleInput, taskDescInput)">Add</button><br>
-</div>
-<br><br>
-<div class="list">
-<ul class="tasksList" *ngFor="let task of tasks">
-  <li><input class="checkbox" type="checkbox" [checked]="task.status" (click)="changeTaskStatus(task)">{{ task.title }}<button class="delBtn" (click)="deleteTask(task)">Del</button></li>
+
+<div class="section">
+<ul class="tasksList list is-hoverable" *ngFor="let task of tasks">
+  <li class="list-item"><input class="checkbox" type="checkbox" [checked]="task.status" (click)="changeTaskStatus(task)">  {{ task.title }}<a class="delete is-pulled-right" (click)="deleteTask(task)"></a></li>
 </ul>
 
-<br><br>
-<button (click)="showTasks()" >Get</button>
+<!-- <button (click)="showTasks()" >Get</button> -->
+</div>
+
+<div class="section">
+  <div class="field"><div class="control"><input class="input control" type="text" name="task-title" #taskTitleInput placeholder="Title..."></div></div>
+  <div class="field"><div class="control"><input class="input control" type="text" name="task-desc" #taskDescInput placeholder="Desc..."></div></div>
+  <button class="addBtn button is-pulled-right" (click)="newTask(taskTitleInput, taskDescInput)">Add</button><br>
 </div>
