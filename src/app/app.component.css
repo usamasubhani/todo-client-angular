@@ -5,6 +5,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 500px;
-    height: 700px;
+    width: 411px;
+    height: 723px;
+
+    border-radius: 54px;
+background: linear-gradient(145deg, #e6e6e6, #ffffff);
+box-shadow:  41px 41px 82px #a6a6a6, 
+             -41px -41px 82px #ffffff;
 }
