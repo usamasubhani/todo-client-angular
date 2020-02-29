@@ -6,7 +6,7 @@ import { Task } from './interfaces/task';
   providedIn: 'root'
 })
 export class DataService {
-  url = 'http://0.0.0.0:5000/todo/api/v1.0/tasks'
+  url = 'https://todo-rest-ms.herokuapp.com/todo/api/v1.0/tasks'
 
   constructor(private http: HttpClient) { }
 
