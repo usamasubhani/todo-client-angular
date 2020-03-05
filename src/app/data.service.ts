@@ -7,7 +7,7 @@ import { Task } from './interfaces/task';
 })
 export class DataService {
   url = 'https://todo-rest-ms.herokuapp.com/todo/api/v1.0/tasks'
-
+  
   constructor(private http: HttpClient) { }
 
   getTasks() {
@@ -16,8 +16,6 @@ export class DataService {
 
   newTask(task: Task) {
     return this.http.post<Task[]>(this.url, task);
-    console.log("DONE")
-    return this.http.get<Task[]>(this.url);
   }
 
   deleteTask(task: Task) {

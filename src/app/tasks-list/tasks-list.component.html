@@ -1,20 +1,3 @@
-<!-- 
-<button (click)="getTasks()" >Get</button>
-<ul class="tasksList" *ngFor="let task of tasks">
-  <li><input type="checkbox" [checked]="task.done"> {{ task.title }}</li>
-  
-  <!-- <p>{{ task.done }}</p> -->
-  <!-- <li class="checked">Pay bills</li> -->
-  
-<!-- </ul> -->
-<!-- <p>{{tasks | json}}</p> -->
-<!--<div class="taskInput">
-    <input type="text" id="taskInput_title" placeholder="Title...">
-    <input type="text" id="taskInput_desc" placeholder="Description">
-    <span ng-click="newTask()" class="addBtn">Add</span>
-</div> -->
-
-
 <div class="section tasks">
 <ul class="tasksList list is-hoverable" *ngFor="let task of tasks">
   <li class="list-item">
@@ -25,8 +8,15 @@
 <!-- <button (click)="showTasks()" >Get</button> -->
 </div>
 
-<div class="section">
-  <div class="field"><div class="control"><input class="input control" type="text" name="task-title" #taskTitleInput placeholder="Title..."></div></div>
-  <div class="field"><div class="control"><input class="input control" type="text" name="task-desc" #taskDescInput placeholder="Desc..."></div></div>
+ <div class="section"> <!-- Input Section -->
+  <div class="field"> <!-- Title Field -->
+    <div class="control">
+      <input class="input control" type="text" name="task-title" #taskTitleInput placeholder="Title...">
+    </div>
+  </div>
+  <div class="field">  <!-- Description Field -->
+    <div class="control"><input class="input control" type="text" name="task-desc" #taskDescInput placeholder="Desc...">
+    </div>
+  </div>
   <button class="addBtn button is-rounded is-pulled-right" (click)="newTask(taskTitleInput, taskDescInput)">Add</button><br>
 </div>
